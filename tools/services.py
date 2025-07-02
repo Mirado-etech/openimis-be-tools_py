@@ -1358,6 +1358,11 @@ def get_or_create_insuree_from_xml(xml, audit_user_id, chf_id=None, family_id=No
             "geolocation": xml.get("GeoLocation"),
             "current_village_id": xml.get("CurVillage"),
             "offline": xml.get("isOffline"),
+            "maladie_invalidante_non": xml.get("MaladieInvalidanteNon"),
+            "handicap_non": xml.get("HandicapNon"),
+            "couverture_assurance_mutuelle": xml.get("CouvertureAssuranceMutuelle"),
+            "milieu_de_residence": xml.get("MilieuDeResidence"),
+            "types_habitation": xml.get("TypesHabitation"),
             # "vulnerability": xml.get("Vulnerability"),  # TODO Ignored by stored proc, no field in tblInsuree
             "audit_user_id": audit_user_id,
             "family_id": family_id,
